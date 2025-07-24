@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Horizontal line - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../dist/victory.min.css">
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+        padding-bottom: 50px;
+    }
+
+    .v-card {
+        padding: 15px;
+        min-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    code {
+        margin: 15px 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="v-container">
+        <h2>Horizontal dividers styles + icon</h2>
+
+        <div class="v-row">
+            <div class="v-col-md-6">
+                <div class="v-card">
+                    foo bar baz
+                    <hr class="v-divider">
+                </div>
+            </div>
+            <div class="v-col-md-6">
+                <div class="v-card v-bg-primary">
+                    foo bar baz
+                    <hr class="v-divider">
+                </div>
+            </div>
+
+            <div class="v-col-md-6">
+                <div class="v-card">
+                    foo bar baz
+                    <hr class="v-divider v-divider-dotted">
+                </div>
+            </div>
+            <div class="v-col-md-6">
+                <div class="v-card v-bg-warning">
+                    foo bar baz
+                    <hr class="v-divider v-divider-dotted">
+                </div>
+            </div>
+
+            <div class="v-col-md-6">
+                <div class="v-card">
+                    foo bar baz
+                    <hr class="v-divider v-divider-dashed">
+                </div>
+            </div>
+            <div class="v-col-md-6">
+                <div class="v-card v-bg-danger">
+                    foo bar baz
+                    <hr class="v-divider v-divider-dashed">
+                </div>
+            </div>
+
+            <div class="v-col-md-6">
+                <div class="v-card">
+                    foo bar baz
+                    <hr class="v-divider v-divider-double">
+                </div>
+            </div>
+            <div class="v-col-md-6">
+                <div class="v-card v-bg-secondary">
+                    foo bar baz
+                    <hr class="v-divider v-divider-double">
+                </div>
+            </div>
+
+            <div class="v-col-md-6">
+                <div class="v-card">
+                    foo bar baz
+                    <hr class="v-divider v-divider-groove">
+                </div>
+            </div>
+            <div class="v-col-md-6">
+                <div class="v-card v-bg-dark">
+                    foo bar baz
+                    <hr class="v-divider v-divider-groove">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var els = document.querySelectorAll(".v-divider, [class^='v-divider'], [class*=' v-divider']");
+
+    for (var i = els.length - 1; i >= 0; i--) {
+        var el = els[i], code = document.createElement("code"), html = el.outerHTML,
+            re = new RegExp('(\\n)[ ]{' + (/[ ]{8,}[<][^\n]+$/.test(html) ? 8 : 4) + '}', 'g');
+
+        code.className = "v-code-pre";
+        code.innerText = html.replace(re, "$1").replace(/^\s+|\s+$/, "");
+
+        el.parentElement.insertBefore(code, el.nextSibling);
+    }
+    </script>
+</body>
+</html>

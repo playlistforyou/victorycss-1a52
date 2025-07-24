@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IE8 html5 fallback test - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="description" content="Page for test Victory.css fallbacks for Internet Explorer 8 (and another browsers withour HTML5 support)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../dist/victory.min.css">
+    <script src="../dist/victory.js" class="el"></script>
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .min {
+        width: 100px;
+    }
+
+    .equal {
+        text-align: center;
+    }
+
+    table code {
+        white-space: pre;
+    }
+    </style>
+</head>
+<body>
+    <h1>IE8 html5 fallback test</h1>
+    <h2>For test open this page in Internet Explorer (8, 9, 10 or 11 version)</h2>
+
+    <div class="v-card v-overflow-auto">
+        <table class="v-table v-table-striped v-bg-primary v-table-hover">
+            <thead>
+                <tr>
+                    <th class="min">Element</th>
+                    <th class="min">Excepted</th>
+                    <th class="min">Current</th>
+                    <td class="min">Equal</td>
+                    <th>Test</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&lt;audio&gt;</code></td>
+                    <td><code>audio { display: none }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <audio></audio>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;dialog&gt;</code></td>
+                    <td><code>dialog { display: none  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <dialog></dialog>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;datalist&gt;</code></td>
+                    <td><code>datalist { display: none  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <datalist></datalist>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;template&gt;</code></td>
+                    <td><code>template { display: none  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <template></template>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;abbr&gt;</code></td>
+                    <td><code>abbr { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <abbr></abbr>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;bdi&gt;</code></td>
+                    <td><code>bdi { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <bdi></bdi>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;data&gt;</code></td>
+                    <td><code>data { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <data></data>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;</code></td>
+                    <td><code>mark { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <mark></mark>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;math&gt;</code></td>
+                    <td><code>math { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <math></math>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;output&gt;</code></td>
+                    <td><code>output { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <output></output>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;picture&gt;</code></td>
+                    <td><code>picture { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <picture></picture>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;source&gt;</code></td>
+                    <td><code>source { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <source></source>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;time&gt;</code></td>
+                    <td><code>time { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <time></time>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;track&gt;</code></td>
+                    <td><code>track { display: inline  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <track></track>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;audio&gt;</code></td>
+                    <td><code>audio[controls] { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <audio controls></audio>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;canvas&gt;</code></td>
+                    <td><code>canvas { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <canvas></canvas>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;meter&gt;</code></td>
+                    <td><code>meter { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <meter></meter>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;progress&gt;</code></td>
+                    <td><code>progress { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <progress></progress>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;video&gt;</code></td>
+                    <td><code>video { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <video></video>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;svg&gt;</code></td>
+                    <td><code>svg { display: inline-block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <svg></svg>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;article&gt;</code></td>
+                    <td><code>article { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <article></article>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;aside&gt;</code></td>
+                    <td><code>aside { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <aside></aside>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;details&gt;</code></td>
+                    <td><code>details { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <details></details>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;figcaption&gt;</code></td>
+                    <td><code>figcaption { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <figcaption></figcaption>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;figure&gt;</code></td>
+                    <td><code>figure { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <figure></figure>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;footer&gt;</code></td>
+                    <td><code>footer { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <footer></footer>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;header&gt;</code></td>
+                    <td><code>header { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <header></header>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;hgroup&gt;</code></td>
+                    <td><code>hgroup { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <hgroup></hgroup>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;main&gt;</code></td>
+                    <td><code>main { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <main></main>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;nav&gt;</code></td>
+                    <td><code>nav { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <nav></nav>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;section&gt;</code></td>
+                    <td><code>section { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <section></section>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;summary&gt;</code></td>
+                    <td><code>summary { display: block  }</code></td>
+                    <td class="response"></td>
+                    <td class="equal"></td>
+                    <td>
+                        <div>
+                            <summary></summary>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var getComputed = window.getComputedStyle, elements = document.querySelectorAll(".v-table tbody tr");
+
+    for (var i = 0, j = elements.length; i < j; i++) {
+        var style, row = elements[i], el = row.querySelector("td > div > *");
+
+        if (getComputed) {
+            style = window.getComputedStyle(el).getPropertyValue('display');
+        } else if (el.currentStyle) {
+            style = el.currentStyle['display'];
+        } else {
+            continue;
+        }
+
+        var code = document.createElement('code'),
+            data = el.tagName + ' { display: ' + style + ' }';
+
+        code.innerText = data;
+
+        row.querySelector("td.response").appendChild(code);
+        row.querySelector("td.equal").innerText = '✔';
+    }
+    </script>
+</body>
+</html>

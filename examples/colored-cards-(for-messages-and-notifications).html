@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colored cards (for messages and notifications) - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cards colored with Victory.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../dist/victory.min.css">
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+    }
+    .v-card {
+        padding: 10px;
+    }
+
+    code {
+        margin: 10px 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="v-card v-bg-primary">Success</div>
+    <div class="v-card v-bg-secondary">See <strong>event</strong></div>
+    <div class="v-card v-bg-danger">Fatal: an error ocorrued</div>
+    <div class="v-card v-bg-success">Registred with success</div>
+    <div class="v-card v-bg-warning">Warning: your missing some fields</div>
+    <div class="v-card v-bg-dark">See <strong>GREAT event</strong></div>
+
+    <script type="text/javascript">
+    var els = document.querySelectorAll(".v-card");
+
+    for (var i = els.length - 1; i >= 0; i--) {
+        var el = els[i], code = document.createElement("code"), html = el.outerHTML,
+            re = new RegExp('(\\n)[ ]{' + (/[ ]{8,}[<][^\n]+$/.test(html) ? 8 : 4) + '}', 'g');
+
+        code.className = "v-code-pre";
+        code.innerText = html.replace(re, "$1").replace(/^\s+|\s+$/, "");
+
+        el.parentElement.insertBefore(code, el.nextSibling);
+    }
+    </script>
+</body>
+</html>

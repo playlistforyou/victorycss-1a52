@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Badges - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSS badges width Victory.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../dist/victory.min.css">
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+    }
+
+    .v-card {
+        padding: 5px;
+        min-height: 100px;
+    }
+
+    code {
+        margin-top: 25px;
+    }
+    </style>
+</head>
+<body>
+    <div class="v-card">
+        <h2>Badges + colors</h2>
+        <div class="example">
+            <div class="v-badge">Join Us!</div>
+            <div class="v-badge v-bg-secondary">Join Us!</div>
+            <div class="v-badge v-bg-danger">Join Us!</div>
+            <div class="v-badge v-bg-success">Join Us!</div>
+            <div class="v-badge v-bg-warning">Join Us!</div>
+            <div class="v-badge v-bg-dark">Join Us!</div>
+            <div class="v-badge v-bg-light">Join Us!</div>
+        </div>
+    </div>
+
+    <div class="v-card">
+        <h2>Badges ("ballons")</h2>
+        <div class="example">
+            <div class="v-badge v-badge-tl">Join Us!</div>
+            <div class="v-badge v-badge-bl">Join Us!</div>
+            <div class="v-badge v-badge-tr">Join Us!</div>
+            <div class="v-badge v-badge-br">Join Us!</div>
+        </div>
+    </div>
+
+    <div class="v-card">
+        <h2>Badges + colors + ballons</h2>
+        <div class="example">
+            <div class="v-badge v-badge-tl v-bg-secondary">Join Us!</div>
+            <div class="v-badge v-badge-tl v-bg-danger">Join Us!</div>
+            <div class="v-badge v-badge-tl v-bg-success">Join Us!</div>
+            <div class="v-badge v-badge-tl v-bg-warning">Join Us!</div>
+            <div class="v-badge v-badge-tl v-bg-dark">Join Us!</div>
+            <div class="v-badge v-badge-tl v-bg-light">Join Us!</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var els = document.querySelectorAll(".example");
+
+    for (var i = els.length - 1; i >= 0; i--) {
+        var el = els[i], code = document.createElement("code"), html = el.outerHTML,
+            re = new RegExp('(\\n)[ ]{' + (/[ ]{8,}[<][^\n]+$/.test(html) ? 8 : 4) + '}', 'g');
+
+        code.className = "v-code-pre";
+        code.innerText = html.replace(re, "$1").replace(/^\s+|\s+$/, "");
+
+        el.parentElement.insertBefore(code, el.nextSibling);
+    }
+    </script>
+</body>
+</html>
