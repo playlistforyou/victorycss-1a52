@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text-align by viewport sizes - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Victory.css can change text-align basead in view-port size with CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../dist/victory.min.css">
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+    }
+
+    .v-card {
+        padding: 20px;
+        margin: 15px;
+        min-height: 210px;
+    }
+    .v-card p {
+        margin-bottom: 25px;
+        font-size: 18pt;
+    }
+
+    code {
+        margin-top: 25px;
+    }
+    </style>
+</head>
+<body>
+    <div class="v-card v-text-right-md v-text-center-lg">  
+        <p>If the view-port is equal to or greater than 576px aligns the text to the center, otherwise it aligns to the right</p>
+        <p>
+            Example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet vestibulum maximus.
+            Curabitur molestie vitae erat at dapibus. Vestibulum vestibulum ultricies est, vel pulvinar
+            urna cursus at. Sed velit enim, facilisis ut bibendum at, tincidunt quis ipsum.
+        </p>
+        <code class="v-code-pre">&lt;div class="v-text-right-md v-text-center-lg"&gt;&lt;/div&gt;</code>
+    </div>
+
+    <div class="v-divider-icon v-divider-dashed">&#128125;</div>
+
+    <div class="v-card v-text-left-md v-text-right-lg">
+        <p>If the view-port is equal to or greater than 768px aligns the text to the right, otherwise it aligns to the left</p>
+        <p>
+            Example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet vestibulum maximus.
+            Curabitur molestie vitae erat at dapibus. Vestibulum vestibulum ultricies est, vel pulvinar
+            urna cursus at. Sed velit enim, facilisis ut bibendum at, tincidunt quis ipsum.
+        </p>
+        <code class="v-code-pre">&lt;div class="v-text-left-md v-text-right-lg"&gt;&lt;/div&gt;</code>
+    </div>
+
+    <div class="v-divider-icon v-divider-dashed">&#128125;</div>
+
+    <div class="v-card v-text-center-md v-text-justify-lg">
+        <p>If the view-port is equal to or greater than 992px aligns the text to the justify, otherwise it aligns to the left</p>
+        <p>
+            Example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet vestibulum maximus.
+            Curabitur molestie vitae erat at dapibus. Vestibulum vestibulum ultricies est, vel pulvinar
+            urna cursus at. Sed velit enim, facilisis ut bibendum at, tincidunt quis ipsum.
+        </p>
+        <code class="v-code-pre">&lt;div class="v-text-center-md v-text-justify-lg"&gt;&lt;/div&gt;</code>
+    </div>
+
+    <div class="v-divider-icon v-divider-dashed">&#128125;</div>
+
+    <div class="v-card v-text-justify-md v-text-center-lg">
+        <p>If the view-port is equal to or greater than 1200px aligns the text to the center, otherwise it aligns to the justify</p>
+        <p>
+            Example: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla laoreet vestibulum maximus.
+            Curabitur molestie vitae erat at dapibus. Vestibulum vestibulum ultricies est, vel pulvinar
+            urna cursus at. Sed velit enim, facilisis ut bibendum at, tincidunt quis ipsum.
+        </p>
+        <code class="v-code-pre">&lt;div class="v-text-justify-md v-text-center-lg"&gt;&lt;/div&gt;</code>
+    </div>
+
+</body>
+</html>

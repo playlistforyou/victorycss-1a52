@@ -1,0 +1,81 @@
+.v-divider, .v-divider-icon, .v-divider-gradient, hr {
+    display: block;
+    margin: 15px $default-out-space;
+    border: none;
+    border-top: thin solid;
+}
+
+.v-divider-icon {
+    position: relative;
+    text-align: center;
+    min-height: 24px;
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.v-divider-icon > * {
+    vertical-align: middle;
+}
+
+@mixin divider-icon($colon) {
+    .v-divider-icon#{$colon}before, .v-divider-icon#{$colon}after {
+        position: relative;
+        display: inline-block;
+        left: -16px;
+        width: 50%;
+        content: '';
+        border: none;
+        border-top: thin solid;
+        vertical-align: middle;
+    }
+}
+
+@mixin divider-icon-after($colon) {
+    .v-divider-icon#{$colon}after {
+        left: auto;
+        right: -16px;
+    }
+}
+
+@include divider-icon(':');
+@include divider-icon('::');
+
+@include divider-icon-after(':');
+@include divider-icon-after('::');
+
+@mixin divider-style($type, $size, $colon) {
+    .v-divider.v-divider-#{$type},
+    .v-divider-icon.v-divider-#{$type}#{$colon}after,
+    .v-divider-icon.v-divider-#{$type}#{$colon}before {
+        border-top-style: unquote($type);
+        border-top-width: #{$size}px;
+        top: -#{calc($size / 2)}px;
+    }
+}
+
+@include divider-style('dashed', 1, ':');
+@include divider-style('dotted', 1, ':');
+@include divider-style('double', 3, ':');
+@include divider-style('groove', 2, ':');
+
+@include divider-style('dashed', 1, '::');
+@include divider-style('dotted', 1, '::');
+@include divider-style('double', 3, '::');
+@include divider-style('groove', 2, '::');
+
+.v-divider-gradient {
+    border: none;
+    height: 1px;
+    opacity: .65;
+    color: inherit;
+
+    /*fallback no currentColor support*/
+    border-bottom: 1px solid;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
+
+    /*fallback no linear-gradient support*/
+    background: currentColor;
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, currentColor 50%, rgba(255, 255, 255, 0) 100%);
+}

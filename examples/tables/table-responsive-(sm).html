@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table responsive (sm) - Victory.css</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../dist/victory.min.css">
+    <style type="text/css">
+    body {
+        background-color: #f7f7f7;
+    }
+
+    .v-card {
+        padding: 5px;
+        min-height: 100px;
+    }
+
+    code {
+        margin: 15px 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="v-card">
+    <h2>v-table-responsive-sm</h2>
+    <table class="v-table v-table-hover v-table-striped v-table-responsive-sm">
+        <thead>
+            <tr>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+                <th>Table Heading</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script type="text/javascript">
+    var els = document.querySelectorAll(".v-table");
+
+    for (var i = els.length - 1; i >= 0; i--) {
+        var el = els[i], code = document.createElement("code"), html = el.outerHTML,
+            re = new RegExp('(\\n)[ ]{' + (/[ ]{8,}[<][^\n]+$/.test(html) ? 8 : 4) + '}', 'g');
+
+        code.className = "v-code-pre";
+        code.innerText = html.replace(re, "$1").replace(/^\s+|\s+$/, "");
+
+        el.parentElement.parentElement.insertBefore(code, el.parentElement.nextSibling);
+    }
+    </script>
+</body>
+</html>

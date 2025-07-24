@@ -1,0 +1,118 @@
+html, body, p, br, hr, div, form {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-size-adjust: 100%;
+}
+
+html, body {
+    border: none;
+}
+
+body {
+    background-color: #fff;
+    font-size: $default-font-size;
+    min-width: 1000px;
+}
+
+@media (min-width: 1px) {
+    body {
+        min-width: $min-view-port-width;
+    }
+}
+
+body, a {
+    color: $default-text-color;
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+    line-height: 1.4em;
+}
+
+sup, sub {
+    font-size: small;
+}
+
+sup {
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+a, img {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    padding: .4em .8em 1em .8em;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: none;
+    outline: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+iframe {
+    background-color: #fff;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    /* autoprefixer: off */
+    box-sizing: border-box;
+}
+
+/* html5 tags for IE8 (don't provide support, they are fallbacks only to avoid the layout breaking) */
+audio, dialog, datalist, template {
+    display: none;
+}
+
+[hidden], audio[controls], canvas, meter, progress, video, svg {
+    display: inline-block;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+meter, progress, audio[controls], canvas, video {
+    display: inline-block;
+}
+
+svg {
+    overflow: hidden;
+}
+
+object {
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}

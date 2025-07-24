@@ -1,0 +1,37 @@
+@mixin underline($colon) {
+    .v-underline#{$colon}after,
+    [class^="v-underline-"]#{$colon}after,
+    [class*=" v-underline-"]#{$colon}after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        margin: 0;
+        margin-top: 2px;
+        border-bottom: thin solid;
+        transition: width .15s ease-out;
+    }
+
+    .v-underline-center#{$colon}after {
+        margin: 0 auto;
+    }
+
+    .v-underline-right#{$colon}after {
+        margin-left: auto;
+    }
+
+    .v-underline:hover#{$colon}after,
+    [class^="v-underline-"]:hover#{$colon}after,
+    [class*=" v-underline-"]:hover#{$colon}after {
+        width: 100%;
+    }
+}
+
+.v-underline, [class^="v-underline-"], [class*=" v-underline-"] {
+    position: relative !important;
+    display: inline-block !important;
+    line-height: normal !important;
+}
+
+@include underline(':');
+@include underline('::');

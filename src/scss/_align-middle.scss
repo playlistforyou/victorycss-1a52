@@ -1,0 +1,16 @@
+@mixin align-middle($colon) {
+    .v-navbar .v-nav-right#{$colon}before,
+    .v-navbar .v-nav-left#{$colon}before,
+    .v-slide > .v-slide-inner#{$colon}before,
+    .v-slide .v-slide-btn-back#{$colon}before,
+    .v-slide .v-slide-btn-next#{$colon}before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@include align-middle(':');
+@include align-middle('::');

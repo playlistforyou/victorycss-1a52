@@ -1,0 +1,97 @@
+.v-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.v-table > caption, .v-table > * > th, .v-table > thead, .v-table > tfoot {
+    font-weight: normal;
+    text-align: center;
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
+.v-table > caption, .v-table > * > tr > * {
+    padding: 16px 12px;
+    color: inherit;
+}
+
+.v-table > tfoot > tr > th {
+    vertical-align: bottom;
+}
+
+.v-table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.v-table > tfoot > tr > td {
+    vertical-align: top;
+}
+
+.v-table-divider > tbody > tr {
+    border-top: thin solid #e5e5e5;
+}
+
+.v-table-striped > tbody > tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, .5);
+    border-top: thin solid #e5e5e5;
+    border-bottom: thin solid #e5e5e5;
+}
+
+.v-table-striped > tbody > tr:last-child {
+    border-bottom: none;
+}
+
+.v-table-hover > tbody > tr:hover {
+    background-color: #97c2ec;
+}
+
+.v-table[class^="v-table-responsive-"], .v-table[class*=" v-table-responsive-"] {
+    width: 100%;
+}
+
+.v-table[class^="v-table-responsive-"], .v-table[class*=" v-table-responsive-"] {
+    tr {
+        white-space: normal;
+    }
+}
+
+/* apply effect for browsers with media-query support */
+@media (min-width: 1px) {
+    .v-table > caption,
+    .v-table[class^="v-table-responsive-"],
+    .v-table[class*=" v-table-responsive-"],
+    .v-table[class^="v-table-responsive-"] > tbody,
+    .v-table[class*=" v-table-responsive-"] > tbody,
+    .v-table[class^="v-table-responsive-"] > tbody > tr,
+    .v-table[class*=" v-table-responsive-"] > tbody > tr,
+    .v-table[class^="v-table-responsive-"] > tbody > tr > *,
+    .v-table[class*=" v-table-responsive-"] > tbody > tr > * {
+        display: block;
+    }
+
+    .v-table[class^="v-table-responsive-"] > thead,
+    .v-table[class*=" v-table-responsive-"] > thead,
+    .v-table[class^="v-table-responsive-"] > tfoot,
+    .v-table[class*=" v-table-responsive-"] > tfoot {
+        display: none;
+    }
+}
+
+@mixin table-responsive($min, $type) {
+    @media (min-width: $min) {
+        .v-table {
+            &.v-table-responsive-#{$type} { display: table; }
+            &.v-table-responsive-#{$type} > caption { display: table-caption; }
+            &.v-table-responsive-#{$type} > thead { display: table-header-group; }
+            &.v-table-responsive-#{$type} > tfoot { display: table-footer-group; }
+            &.v-table-responsive-#{$type} > tbody { display: table-row-group; }
+            &.v-table-responsive-#{$type} > tbody > tr { display: table-row; }
+            &.v-table-responsive-#{$type} > tbody > tr > * { display: table-cell; }
+        }
+    }
+}
+
+@include table-responsive($global-view-port-sm, 'sm');
+@include table-responsive($global-view-port-md, 'md');
+@include table-responsive($global-view-port-lg, 'lg');
+@include table-responsive($global-view-port-xl, 'xl');

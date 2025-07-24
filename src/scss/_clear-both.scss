@@ -1,0 +1,16 @@
+@mixin clearfix($colon) {
+    .v-clear,
+    .v-clear-in#{$colon}after,
+    .v-row#{$colon}after,
+    .v-navbar#{$colon}after,
+    .v-card#{$colon}after,
+    .v-slide > .v-slide-inner#{$colon}after {
+        clear: both;
+        display: block;
+        content: '';
+        height: 0;
+    }
+}
+
+@include clearfix(':');
+@include clearfix('::');

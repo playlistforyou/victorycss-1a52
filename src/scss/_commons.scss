@@ -1,0 +1,58 @@
+:after, :before, .v-no-select {
+    user-select: none;
+}
+
+::after, ::before, .v-no-select {
+    /* autoprefixer: off */
+    user-select: none;
+}
+
+.v-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+}
+
+.v-card, .v-notify {
+    margin: $default-out-space;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.v-card, .v-notify, .v-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .09),
+                0 1px 2px rgba(0, 0, 0, .18);
+}
+
+.v-notify {
+    display: block;
+    padding: 10px;
+}
+
+.v-overflow-auto {
+    overflow: auto !important;
+    width: 100%;
+    display: block;
+}
+
+.v-no-transition, .v-no-transition *, .v-no-transition-only {
+    transition: none !important;
+}
+
+.v-no-space {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.v-no-padding {
+    padding: 0 !important;
+}
+
+.v-no-margin {
+    margin: 0 !important;
+}

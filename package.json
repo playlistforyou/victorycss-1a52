@@ -1,0 +1,54 @@
+{
+  "name": "victory.css",
+  "version": "0.6.2",
+  "description": "A lightweight and very simple front-end framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "readme": "gulp readme",
+    "examples": "gulp examples",
+    "mergecss": "gulp mergecss",
+    "prefix": "gulp prefix",
+    "mincss": "gulp mincss",
+    "mergejs": "gulp mergejs",
+    "minjs": "gulp minjs",
+    "standard": "gulp standard",
+    "basic:mergecss": "gulp basic:mergecss",
+    "basic:mincss": "gulp basic:mincss",
+    "basic:mergejs": "gulp basic:mergejs",
+    "basic:minjs": "gulp basic:minjs",
+    "basic": "gulp basic"
+  },
+  "author": "Guilherme Nascimento",
+  "license": "MIT",
+  "email": "brcontainer@yahoo.com.br",
+  "homepage": "https://victory-css.github.io/",
+  "bugs": {
+    "url": "https://github.com/brcontainer/victory.css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brcontainer/victory.css.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-minify": "^3.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "markdown-it": "^14.1.0",
+    "sass": "^1.77.8"
+  },
+  "browserslist": [
+    "Android >= 2.3",
+    "Firefox >= 28",
+    "ie >= 8",
+    "iOS >= 7",
+    "Opera >= 15"
+  ]
+}
